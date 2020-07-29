@@ -1,6 +1,7 @@
 package member.model.service;
 
 import member.model.dao.MemberDAO;
+import member.model.dto.Member;
 
 public class MemberServiceImpl implements MemberService {
 

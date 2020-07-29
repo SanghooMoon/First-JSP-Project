@@ -9,13 +9,21 @@ import javax.servlet.http.HttpServletResponse;
 
 import member.model.dto.Member;
 import member.model.service.MemberService;
+import member.model.service.MemberServiceImpl;
 
 @WebServlet("/member/*")
 public class MemberController extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-	
 	private MemberService mService;   
+	
+	@Override
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+		mService = new MemberServiceImpl();
+	}
+
+	
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -47,8 +55,6 @@ public class MemberController extends HttpServlet {
 			member.setPhone(request.getParameter("phone"));
 			
 			mService.singUp(member); // 회원가입 서비스 실행
-			
-
 			
 		}
 		
