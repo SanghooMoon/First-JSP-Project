@@ -1,0 +1,390 @@
+#container {
+    background-color: #fff;
+}
+.mainBox {
+    padding-top: 75px;
+    padding-bottom: 41px;
+    background: #374a72;
+}
+.rowBox {
+    overflow: hidden;
+}
+.txtBox {
+    padding-left: 14px;
+    color: #fff;
+}
+.txtBox p {
+    padding-top: 17px;
+    margin-bottom: 9px;
+    font-size: 40px;
+}
+
+.txtBox span {
+    letter-spacing: 2.4px;
+}
+.searchBox {
+    position: relative;
+    width: 497px;
+    height: 54px;
+    margin-top: 33px;
+    border: 3px solid #ffda56;
+    border-radius: 50px;
+    letter-spacing: 0px;
+}
+.searchBox label {
+    position: relative;
+    display: inline-block;
+    width: 28%;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    vertical-align: middle;
+}
+.searchBox label:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 54px;
+    background: #ffda56;
+}
+.searchBox .input-wrap {
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+}
+
+.searchBox .input-wrap input {
+    width: 75%;
+    padding: 19px 20% 19px 5%;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    vertical-align: bottom;
+    background: none;
+    letter-spacing: 0px;
+}
+::placeholder {
+    color: white;
+}
+
+.searchBox .btn-search {
+    position: absolute;
+    top: -9px;
+    right: -3px;
+    display: block;
+    text-indent: -999em;
+    background: url(../images/ico-search.png) no-repeat 50% 50%;
+    width: 72px;
+    height: 72px;
+    /* vertical-align: bottom; */
+    background-color: #ffda56;
+    border-radius: 100%;
+}
+.column {
+    width: 50%;
+    float: left;
+}
+.mainBg img {
+    margin-left: -24px;
+}
+
+.quickMenuBox {
+    background: #68abf2;
+    margin-bottom: 47px;
+}
+.quickMenuBox .quickMenu {
+    overflow: hidden;
+}
+.quickMenuBox .quickMenu li {
+    float: left;
+    text-align: center;
+    width: 12.5%;
+}
+
+.quickMenuBox .quickMenu li a {
+    display: block;
+    position: relative;
+    padding-top: 22px;
+}
+.quickMenuBox .quickMenu li a span {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 19px;
+    color: #fff;
+}
+.noticeBox {
+    margin-bottom: 13px;
+}
+.notice {
+    position: relative;
+    padding-bottom: 11px;
+}
+
+.tab .tabMenu {
+    position: relative;
+    overflow: hidden;
+}
+
+.tab .tabMenu:after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #caced3;
+    z-index: 0;
+}
+.tab .tabMenu li {
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+.tab .tabMenu li a {
+    position: relative;
+    display: block;
+    height: 56px;
+    line-height: 56px;
+    padding: 0 25px;
+    font-size: 16px;
+    color: #444;
+    font-weight: bold;
+    border-top: 4px solid #caced3;
+}
+.tab .tabMenu li a.on { 
+    color: #3a4d77;
+    border-top: 4px solid #3a4d77;
+}
+.book {
+    height: 284px!important;
+}
+.book {
+    position: relative;
+    margin-left: 2%;
+}
+.tab .btn2 {
+    position: absolute;
+    top: 28px;
+    right: 25px;
+    padding-right: 30px;
+    font-size: 13px;
+    color: #58648d;
+}
+
+.tab .btn2.more {
+    background: url(../images/btn-more.png) no-repeat 100% 50%;
+}
+
+.notice .con ul {
+    padding-top: 20px;
+    padding-right: 20px;
+    border-top: 1px solid #caced3;
+}
+
+.notice .con ul li:first-child {
+    overflow: hidden;
+    padding-left: 109px;
+    background: url(../images/blt-news.png) no-repeat 22px 2px;
+    border-bottom: 1px dashed #dedede;
+    margin-bottom: 24px;
+}
+
+.notice .con ul li:first-child a {
+    padding-top: 7px;
+    padding-bottom: 25px;
+}
+
+.notice .con ul li a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.notice .con ul li a strong {
+    float: left;
+    display: block;
+    width: 60%;
+    font-weight: normal;
+    padding-left: 11px;
+    background: url(../images/ico-dot.gif) no-repeat 0 50%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.notice .con ul li:first-child a strong {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #262626;
+    background: none;
+    white-space: normal;
+}
+.notice .con ul li {
+    margin-bottom: 10px;
+}
+.notice .con ul li:first-child a .date {
+    float: none;
+    top: 7px;
+}
+.notice .con ul li:first-child a .txt {
+    display: block;
+    padding-top: 7px;
+}
+.notice .con ul li a .date {
+    float: right;
+    color: #444444;
+}
+.book .bookContent {
+    padding-top: 55px;
+    border-top: 1px solid #caced3;
+}
+.bx-wrapper {
+    border: none;
+    box-shadow: none;
+    max-width: 100% !important;
+}
+.book .bookContent .bx-viewport {
+    height: 200px!important;
+}
+.boxWrap {
+    width: 50%;
+    float: left;
+}
+.boxWrap h3 {
+    height: 45px;
+    padding-left: 15px;
+    line-height: 45px;
+    font-size: 16px;
+    color: #222222;
+    border-bottom: 1px solid #dadada;
+}
+.popupZone {
+    overflow: hidden;
+    position: relative;
+    width: 310px;
+    margin: 0 auto;
+    border: 1px solid #dadada;
+}
+
+.popupZone .popup-list {
+    position: relative;
+    width: 100%;
+}
+.movie {
+    position: relative;
+    width: 310px;
+    margin: 0 auto;
+    border: 1px solid #dadada;
+}
+
+.banner {
+    clear: both;
+    margin-top: 30px;
+    margin-bottom: 55px;
+    width: 100%;
+}
+.banner .bannerWrap {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #dadada;
+    padding: 22px 15px 22px 15px;
+    height: 45px;
+}
+.banner h3 {
+    float: left;
+    width: 11%;
+}
+.ui-datepicker {
+    margin: 0 auto;
+}
+tr td:nth-child(1) .ui-state-default {
+    color: red;
+}
+tr td:nth-child(2) .ui-state-default {
+    color: darkred;
+}
+tr td:nth-child(7) .ui-state-default {
+    color: blue;
+}
+.quickBox {
+    position: relative;
+    width: 310px;
+    margin: 0 auto;
+}
+.quickBox ul {
+    padding: 10px 22px;
+    background: #caced3;
+}
+.quickBox ul li:first-child { margin: 0;}
+.quickBox ul li {
+    margin-top: 2px;
+}
+.quickBox ul li a {
+    display: block;
+    height: 41px;
+    padding-left: 16px;
+    line-height: 41px;
+    font-size: 16px;
+    color: #2e2f2f;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+@media (max-width: 1000px) {
+    
+
+    .mainBox .mainBg {
+        display: none;
+    }
+    .column {
+        width: 100%;
+    }
+    .rowBox {
+        padding: 20px;
+    }
+    .mainBox {
+        text-align: center;
+    }
+    .mainBox .searchBox {
+        display: inline-block;
+    }
+    .quickMenuBox .quickMenu {
+        padding: 0;
+    }
+    .quickMenuBox .quickMenu li {
+        width: 25%;
+    }
+    .quickMenuBox .quickMenu li a span {
+        letter-spacing: -1px;
+        font-size: 12px;
+    }
+    .mainBox .txtBox {
+        padding-left: 0;
+    }
+    .txtBox p {
+        font-size: 30px;
+    }
+    .txtBox span {
+        font-size: 10px;
+    }
+    .mainBox .searchBox {
+        display: inline-block;
+        width: 100%;
+    }
+    .quickMenuBox {
+        padding: 0;
+    }
+
+}
+@media (max-width: 580px){
+    .quickMenuBox .quickMenu li a img {
+        width: 60px;
+    }
+    
+}

@@ -1,0 +1,146 @@
+.doc-bg {
+    height: 152px;
+    overflow: hidden;
+}
+.headerImg img {
+    height: 111px;
+}
+.doc-bg img {
+    width: 100%;
+    height: 100%;
+}
+.doc-info {
+    padding: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #dddddd;
+    height: 40px;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+.doc-info ul {
+    float: left;
+}
+.doc-info ul li {
+    font-size: 14px;
+    padding-left: 32px;
+    margin-left: 8px;
+    height: 38px;
+    padding-top: 3px;
+    display: inline-block;
+}
+/* .section li img {
+    margin-top: 10px;
+} */
+.doc-info ul li a {
+    color: #656565;
+    text-decoration: none;
+    font-size: 13px!important;
+}
+.doc-info li a {
+    height: 33px;
+    line-height: 33px;
+    font-size: 12px;
+}
+.subContainer {
+    clear: both;
+    height: auto;
+    background: #fff;
+    padding: 0 3% 0 3%;
+}
+.subContainer > .section {
+    position: relative;
+}
+.section {
+    padding-left: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1260px!important;
+}
+.subContainer > .section > .lnb {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+}
+.lnb {
+    width: 220px;
+    float: left;
+}
+.lnb h2 {
+    background: url(../images/sub-title-bg.gif);
+    color: #fff;
+    height: 122px;
+}
+.lnb h2 b {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 53px 0;
+    display: block;
+    margin: 0 10% 0 10%;
+    text-align: center;
+}
+.subContainer > .section > .content {
+    padding-left: 262px;
+}
+.content {
+    margin-right: -255px;
+    width: 98%;
+    float: left;
+    min-height: 900px;
+}
+.lnb > ul > li {
+    border-bottom: 1px solid #d9d9d9;
+}
+.lnb > ul > li > a {
+    font-size: 14px;
+    font-weight: 600;
+}
+.lnb > ul > li > a {
+    padding: 15px 20px 16px 20px;
+    position: relative;
+    display: block;
+}
+.doc {
+    margin-right: 255px;
+    padding: 0 0 60px;
+}
+.doc-head {
+    overflow: hidden;
+}
+.doc-title {
+    border-bottom: 0;
+}
+.doc-title h3 {
+    display: inline-block;
+    zoom: 1;
+    word-break: break-all;
+    font-size: 30px;
+    letter-spacing: -1px;
+    font-weight: 600;
+    color: #444;
+    margin-top: 42px;
+    line-height: 35px;
+}
+.doc-title p img {
+    margin-top: 10px;
+}
+.doc-body {
+    color: #666;
+    line-height: 150%;
+    padding-top: 20px;
+}
+
+@media (max-width: 1000px) {
+    .lnb {
+        display: none;
+    }
+    .subContainer > .section > .content {
+        padding: 0;
+        margin: 0;
+    }
+    .doc {
+        margin: 0;
+    }
+}

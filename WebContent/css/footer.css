@@ -1,0 +1,64 @@
+.footer {
+    overflow: hidden;
+    background: #ebedf1;
+    border: 1px solid #d3d7db;
+}
+.footer .info {
+    float: left;
+    padding: 14px;
+    padding-left: 0;
+}
+.footer .info li {
+    float: left;
+}
+.footer .info li:first-child a {
+    padding-left: 0;
+    font-weight: bold;
+    color: #000;
+}
+.footer .info li a {
+    padding: 0 14px;
+}
+
+.footer .info li a:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 15px;
+    background: #959799;
+}
+.footer .info li:first-child a::before {
+    display: none;
+}
+
+.address {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 45px;
+    line-height: 1.4;
+}
+.address dl {
+    overflow: hidden;
+    float: left;
+}
+.address dl:first-child dt {
+    display: block;
+    text-indent: -999em;
+    margin-left: -100px;
+}
+.address dl dt {
+    float: left;
+    font-weight: bold;
+}
+.address dl dd {
+    float: left;
+    margin-right: 10px;
+    letter-spacing: -0.4px;
+}
+.address span {
+    display: block;
+    clear: both;
+    font-size: 11px;
+    letter-spacing: 0px;
+}

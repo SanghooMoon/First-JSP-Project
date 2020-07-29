@@ -1,0 +1,102 @@
+/* ------------ header ------------ */
+#header {
+    width: 100%;
+    height: auto;
+    padding-bottom: 0;
+    overflow: hidden;
+    border-top: 4px solid #7b6e62;
+    border-bottom: 1px solid #dddddd;
+}
+#header #tnbWrap {
+    width: 100%;
+    padding: 12px 0;
+    text-align: right;
+    border-bottom: 1px solid #ececec;
+}
+
+#header #tnbWrap .section .util li {
+    display: inline-block;
+    color: #202020;
+    padding-left: 10px;
+    position: relative;
+    font-size: 13px;
+}
+#header #gnbWrap .section {
+    position: static;
+}
+#header #gnbWrap {
+    width: 100%;
+    height: 80px;
+    padding-bottom: 8px;
+    font-size: 0;
+    margin: 0 auto;
+    background: #fff;
+}
+
+#header #gnbWrap h1 {
+    position: absolute;
+    font-size: 0;
+    top: 67px;
+}
+#header #gnbWrap .g-menu {
+    width: 100%;
+    text-align: right;
+}
+#header #gnbWrap .g-menu .gnbMenu {
+    display: inline-block;
+    vertical-align: middle;
+    font: 16px "나눔고딕";
+    font-weight: normal;
+    color: #000;
+}
+#header #gnbWrap .g-menu .gnbMenu > li {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    padding: 34px 0 3px 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.gnbMenu a {
+    text-align: right;
+    display: inline-block;
+    padding: 3px 0;
+    font-weight: 600;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 45px;
+    letter-spacing: -1.5px;
+}
+
+#gnbWrap ul.gnbMenu > li {
+    cursor: pointer;
+}
+#gnbWrap .mmode {
+    position: absolute;
+    top: 63px;
+    right: 1%;
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .g-menu, #tnbWrap { display: none ;}
+    #header #gnbWrap h1 {
+        position: absolute;
+        width: 45%;
+        font-size: 0;
+        left: 10px;
+        top: 23px;
+    }
+    #header .m-menu {
+        position: absolute;
+        top: 29px;
+        height: 35px;
+        font-size: 0;
+        right: 15px;
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    #headerImg { display: none;}
+}

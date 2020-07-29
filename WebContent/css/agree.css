@@ -1,0 +1,69 @@
+#agree-wrap {
+    margin-top: 50px;
+}
+#agree-wrap > p {
+    display: inline-block;
+    height: 120px;
+    line-height: 120px;
+    font-size: 19px;
+    color: black;
+}
+#agree-wrap span {
+    color: #0f509f;
+    font-weight: bold;
+}
+#agree-wrap h4 {
+    color: black;
+    font-size: 140%;
+    font-weight: bold;
+    padding: 8px 0;
+    margin-top: 30px;
+}
+.agree-box {
+    position: relative;
+    overflow-y: scroll;
+    height: 260px;
+    padding: 15px;
+    border: 1px solid #b3b1b4;
+    box-sizing: border-box;
+}
+.agree-content {
+    height: 228px;
+    overflow: visible;
+}
+.agree-content p {
+    font-size: 13px;
+}
+table { width: 100%; border-collapse: collapse;}
+table th, table td { border: 1px solid #e5e8eb;}
+
+.check-box {
+    margin-top: 10px;
+    padding: 10px 0;
+    text-align: right;
+}
+.check-box input {
+    width: 20px; height: 20px;
+    margin-right: 5px;
+}
+.check-box label {
+    position: relative;
+    top: -5px;
+    font-size: 15px;
+}
+.button-box {
+    text-align: center;
+}
+button {
+    width: 140px; height: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+
+}
+a:last-child button:last-child {
+    margin-left: 20px;
+    background-color: #949494;
+    color: white;
+}

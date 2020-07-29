@@ -1,0 +1,44 @@
+.doc-body .txt-box {
+    border: 1px solid #e1e1e1;
+    background-color: #fafafa;
+    padding: 2%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-top: 3px solid #999;
+    border-bottom:  2px solid #e5e8eb;
+    border-collapse: collapse;
+    font-size: inherit;
+}
+table th {
+    width: 18%;
+    border-right: 1px solid #e5e8eb;
+}
+table tr{
+    border-bottom : 1px solid #e5e8eb;
+}
+table input { height: 30px; padding: 0 10px;}
+table th, table td { padding: 10px 15px;}
+table td button {
+    width: 130px; height: 30px;
+    margin-left: 15px;
+    background-color: #266ac4;
+    border-radius: 5px;
+    border-color: #266ac4;
+    color: white;
+}
+button#joinBtn {
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #266ac4;
+    border-radius: 5px;
+    border-color: #266ac4;
+    color: white;
+    cursor: pointer;
+    border: 0;
+    font-size: larger;
+}
