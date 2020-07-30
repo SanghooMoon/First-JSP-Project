@@ -13,9 +13,9 @@ public class DBManager {
 	//XE : 오라클 서버의 전역 데이터베이스 이름
 	private static String url = "jdbc:oracle:thin:@localhost:1521:XE";
 	//사용자명
-	private static String uid = "sanghoo";
+	private static String uid = "scott";
 	//패스워드
-	private static String pwd = "sanghoo";
+	private static String pwd = "tiger";
 	
 	//DB 연결을 위한 메서드
 	public static Connection getConnection() {

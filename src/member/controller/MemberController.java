@@ -1,6 +1,8 @@
 package member.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -44,6 +46,18 @@ public class MemberController extends HttpServlet {
 				nextPage = "/membership/agree.jsp";
 			else
 				nextPage = "/membership/register.jsp";
+		} else if(path.equals("/duplicateChk")) {
+			String id = request.getParameter("id");
+			PrintWriter writer = response.getWriter();
+			if(mService.idDuplicateChk(id)) {
+				System.out.println("존재하는 아이디");
+				writer.print("used");
+			} else {
+				System.out.println("사용가능한 아이디");
+				writer.print("not_used");
+			}
+			
+			return;
 		} else if(path.equals("/signUp")) {		// 회원가입-정보입력(서비스)
 			nextPage = "/membership/login.jsp";
 			

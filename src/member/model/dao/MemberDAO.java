@@ -2,6 +2,7 @@ package member.model.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import member.model.dto.Member;
 import util.DBManager;
@@ -39,4 +40,34 @@ public class MemberDAO {
 		}
 	}
 	
+	public boolean selectID(String id) {
+		
+		boolean hasId = false;	// 존재하는 아이디인지, 기본값 false : 존재하지 않다.(사용가능)
+		
+		String sql = "SELECT * FROM member WHERE id=?";
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		
+		try {
+			
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rset = pstmt.executeQuery();
+			// 존재하는 아이디라면
+			if(rset.next()) {
+				hasId = true;
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt, rset);
+		}
+		
+		return hasId;
+	}
 }

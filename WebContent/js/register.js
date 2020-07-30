@@ -25,7 +25,7 @@ function goLoginPage() {
     alert("회원가입이 정상적으로 완료되었습니다.");
     var theForm = document.joinFrm;
     theForm.method = "post";
-    theForm.action = "/Sanghoo/member/signUp";
+    theForm.action = "/Sanghoo/member/signUp";	// 최상위 경로 동적으로 수정해야함.
     theForm.submit();
 }
 
@@ -80,7 +80,30 @@ function idDuplicateCheck() {
         id.focus();
         return false;
     } 
-
+    
+	$.ajax({
+		type: "post",
+		async: false,
+		url: "/Sanghoo/member/duplicateChk",
+		datatype: "text",
+		data: {id: id.value},
+		success: function(data, textStatus) {
+			if(data == "used"){
+				msg.style = "color:red";
+		        msg.innerHTML = "이미 사용중인 아이디입니다."; 
+		        id.value = "";
+		        id.focus();
+			} else {
+				msg.style = "color:green";
+		        msg.innerHTML = id.value + "(은)는 사용 가능한 아이디입니다.";
+		        // idFlag 변수에 현재 입력한 아이디 값 저장
+		        idFlag = id.value;
+		        console.log(idFlag);
+			}
+		}
+	})
+    
+    /*
     // 만약 id가 'scott'이면
     if( id.value == "scott" ) {
         msg.style = "color:red";
@@ -95,6 +118,7 @@ function idDuplicateCheck() {
         idFlag = id.value;
         console.log(idFlag);
     }
+    */
 }
 
 function pwdCheck() {

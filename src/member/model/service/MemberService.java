@@ -4,6 +4,9 @@ import member.model.dto.Member;
 
 public interface MemberService {
 
-	public void singUp(Member member);	// 회원가입(서비스)
+	public void singUp(Member member);	// 최종 회원가입
+
+	public boolean idDuplicateChk(String id);	// 아이디 중복확인
+	
 	
 }
