@@ -42,7 +42,6 @@ public class MemberController extends HttpServlet {
 			nextPage = "/membership/login.jsp";
 		} else if(path.equals("/signIn")) {			// 로그인(서비스), 스프링때는 ajax로도 해보자
 			
-			
 			// 기본 다음페이지는 로그인(로그인실패), 성공 시 메인으로
 			nextPage = "/membership/login.jsp";
 
@@ -52,12 +51,15 @@ public class MemberController extends HttpServlet {
 			Member member = mService.signIn(id);
 
 			if(member!=null && pwd.equals(member.getPwd())) {
-				System.out.println("로그인 성공");
 				nextPage = "/index";
 				HttpSession session = request.getSession();
 				session.setAttribute("loginUserInfo", member);
 			}
-			System.out.println("로그인 실패");
+			
+		} else if(path.equals("/logout")) {		// 로그아웃(서비스)
+			nextPage = "/index";
+			HttpSession session = request.getSession();
+			session.invalidate();	// 세션 해제
 			
 		} else if(path.equals("/agree")) {		// 회원가입-약관동의(화면)
 			nextPage = "/membership/agree.jsp";

@@ -17,7 +17,7 @@ function goMainPage() {
     if(!blankCheck(id, "아이디") || !blankCheck(pwd, "비밀번호")) {
         return false;
     }
-    alert("로그인 시도");
+    
     var theForm = document.loginFrm;
     theForm.method = "post";
     theForm.action = "/Sanghoo/member/signIn"; // 로그인(서비스)
