@@ -14,7 +14,13 @@
 	<div id="wrap">
 		<%@ include file="./common/header.jsp" %>
 		
+		<!-- 임시 마크업 -->
 		<h2>관리자 페이지입니다.</h2>
+		<br>
+		<a>회원 관리</a>
+		<br>
+		<a>가입 요청 목록</a>
+		
 		
 		<%@ include file="./common/footer.jsp" %>
 	</div>
