@@ -22,7 +22,7 @@ function goMainPage() {
     theForm.method = "post";
     theForm.action = "/Sanghoo/member/signIn"; // 로그인(서비스)
     theForm.submit();
-    
+
     /*
     //만약 id와 password가 모두 일치하면
     if(id.value == USER_ID && pwd.value == USER_PWD) {

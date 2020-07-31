@@ -18,7 +18,7 @@ public class MemberDAO {
 	// 데이터베이스에 회원을 추가하는 메서드
 	public void insertMember(Member member) {
 		
-		String sql = "INSERT INTO member VALUES(?, ?, ?, ?, SYSDATE, 'Y')";
+		String sql = "INSERT INTO member VALUES(?, ?, ?, ?, SYSDATE, 'Y', 'NORMAL')";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -98,6 +98,9 @@ public class MemberDAO {
 				member.setPwd(rset.getString("pwd"));
 				member.setName(rset.getString("name"));
 				member.setPhone(rset.getString("phone"));
+				member.setIndate(rset.getTimestamp("indate"));
+				member.setUse(rset.getString("use"));
+				member.setGrade(rset.getString("grade"));
 			}
 			
 		} catch (Exception e) {

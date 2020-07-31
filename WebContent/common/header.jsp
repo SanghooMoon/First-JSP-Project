@@ -4,6 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <c:set var="HOME" value="${pageContext.request.contextPath}" />
+<c:set var="GRADE" value="${sessionScope.loginUserInfo.grade}"/>
 <%-- 공통 헤더 마크업(디자인) 영역--%>
 <!-- header -->
 <header id="header">
@@ -11,7 +12,14 @@
 		<div class="section">
 			<div class="util">
 				<ul>
-					<li><a href="${HOME}/index" title="홈으로">홈으로</a></li>
+					<c:choose>
+						<c:when test="${ GRADE eq 'ADMIN' }">
+							<li><a href="${HOME}/admin/home" title="홈으로">홈으로</a></li>
+						</c:when>
+						<c:otherwise>
+							<li><a href="${HOME}/index" title="홈으로">홈으로</a></li>
+						</c:otherwise>
+					</c:choose>
 
 					<c:choose>
 						<%-- 비로그인 상태일때 --%>

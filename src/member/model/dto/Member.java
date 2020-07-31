@@ -10,7 +10,7 @@ public class Member {
 	private String phone;
 	private Timestamp indate;
 	private String use;
-	
+	private String grade;
 	
 	public String getId() {
 		return id;
@@ -47,6 +47,12 @@ public class Member {
 	}
 	public void setUse(String use) {
 		this.use = use;
+	}
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
 	}
 	
 	

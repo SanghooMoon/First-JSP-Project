@@ -48,12 +48,27 @@ public class MemberController extends HttpServlet {
 			String id = request.getParameter("id");
 			String pwd = request.getParameter("pwd");
 			
+			System.out.println(id);
+			System.out.println(pwd);
+			
 			Member member = mService.signIn(id);
-
+			
 			if(member!=null && pwd.equals(member.getPwd())) {
-				nextPage = "/index";
-				HttpSession session = request.getSession();
-				session.setAttribute("loginUserInfo", member);
+				
+				if(member.getUse().equals("N")) {
+					request.setAttribute("msg", "승인되지 않은 사용자입니다. 관리자에게 문의해주세요.");
+				} else if(member.getGrade().equals("ADMIN")) {
+					nextPage = "/admin/home";
+					HttpSession session = request.getSession();
+					session.setAttribute("loginUserInfo", member);
+				} else {
+					nextPage = "/index";
+					HttpSession session = request.getSession();
+					session.setAttribute("loginUserInfo", member);
+				}
+
+			} else {
+				request.setAttribute("msg", "가입하지 않은 아이디이거나, 잘못된 비밀번호입니다.");
 			}
 			
 		} else if(path.equals("/logout")) {		// 로그아웃(서비스)
@@ -64,10 +79,12 @@ public class MemberController extends HttpServlet {
 		} else if(path.equals("/agree")) {		// 회원가입-약관동의(화면)
 			nextPage = "/membership/agree.jsp";
 		} else if(path.equals("/register")) {	// 회원가입-정보입력(화면)
+			
 			if(!"true".equals(request.getParameter("continue")))
 				nextPage = "/membership/agree.jsp";
 			else
 				nextPage = "/membership/register.jsp";
+			
 		} else if(path.equals("/duplicateChk")) {	// 회원가입 - 아이디 중복체크(서비스)
 			String id = request.getParameter("id");
 			PrintWriter writer = response.getWriter();
