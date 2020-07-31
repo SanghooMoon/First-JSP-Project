@@ -8,5 +8,5 @@ public interface MemberService {
 
 	public boolean idDuplicateChk(String id);	// 아이디 중복확인
 	
-	
+	public Member signIn(String id);	// 로그인
 }

@@ -8,10 +8,8 @@
 <head>
    <%@ include file="../common/head.jspf" %>
     
-    <!-- 로그인페이지 CSS 파일  -->
     <link rel="stylesheet" href="../css/login.css">
-    <!-- login.js 로그인을 위한 자바스크립트 -->
-    <!-- <script type="text/javascript" src="../js/login.js"></script> -->
+    <script type="text/javascript" src="../js/login.js"></script>
    	<title>로그인</title>
     
 </head>
@@ -50,7 +48,7 @@
                                 <p>- 통합회원 가입 후 2년이 경과한 경우, 개인정보 수집·이용에 대한 재동의가 필요하며, 재동의하지 않을 경우 회원 정보가 삭제될 수 있습니다.</p>
                                 <!-- loginBox -->
                                 <div id="loginBox">
-                                <form action="#" id="loginForm">
+                                <form action="#" id="loginForm" name="loginFrm">
                                     <input type="text" id="id" name="id" placeholder="아이디">              
                                     <input type="password" id="pwd" name="pwd" placeholder="비밀번호">
                                     <button type="button" onclick="goMainPage();" id="loginBtn">로그인</button>

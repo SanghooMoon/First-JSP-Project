@@ -18,5 +18,11 @@ public class MemberServiceImpl implements MemberService {
 		// TODO Auto-generated method stub
 		return mDAO.selectID(id);		// 존재하는 회원인지 검색
 	}
+
+	@Override
+	public Member signIn(String id) {
+		// TODO Auto-generated method stub
+		return mDAO.selectMember(id);
+	}
 	
 }

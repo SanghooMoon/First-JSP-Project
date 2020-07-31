@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import member.model.dto.Member;
 import member.model.service.MemberService;
@@ -39,6 +40,25 @@ public class MemberController extends HttpServlet {
 		
 		if(path.equals("/login")) {				// 로그인(화면) 
 			nextPage = "/membership/login.jsp";
+		} else if(path.equals("/signIn")) {			// 로그인(서비스), 스프링때는 ajax로도 해보자
+			
+			
+			// 기본 다음페이지는 로그인(로그인실패), 성공 시 메인으로
+			nextPage = "/membership/login.jsp";
+
+			String id = request.getParameter("id");
+			String pwd = request.getParameter("pwd");
+			
+			Member member = mService.signIn(id);
+
+			if(member!=null && pwd.equals(member.getPwd())) {
+				System.out.println("로그인 성공");
+				nextPage = "/index";
+				HttpSession session = request.getSession();
+				session.setAttribute("loginUserInfo", member);
+			}
+			System.out.println("로그인 실패");
+			
 		} else if(path.equals("/agree")) {		// 회원가입-약관동의(화면)
 			nextPage = "/membership/agree.jsp";
 		} else if(path.equals("/register")) {	// 회원가입-정보입력(화면)
@@ -46,7 +66,7 @@ public class MemberController extends HttpServlet {
 				nextPage = "/membership/agree.jsp";
 			else
 				nextPage = "/membership/register.jsp";
-		} else if(path.equals("/duplicateChk")) {
+		} else if(path.equals("/duplicateChk")) {	// 회원가입 - 아이디 중복체크(서비스)
 			String id = request.getParameter("id");
 			PrintWriter writer = response.getWriter();
 			if(mService.idDuplicateChk(id)) {
