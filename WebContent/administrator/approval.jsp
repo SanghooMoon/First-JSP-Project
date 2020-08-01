@@ -10,6 +10,23 @@
    	<%@ include file="../common/head.jspf" %>
     <link rel="stylesheet" href="${HOME}/css/approval.css">
 	<title>가입 요청 목록</title>
+	<script>
+		function doApproval(){
+			
+			var theForm = document.approvalFrm;
+			theForm.mothod = "post";
+			theForm.action = "${HOME}/admin/update/approval";
+			theForm.submit();
+			
+		};
+		
+		function doReject(){
+			var theForm = document.approvalFrm;
+			theForm.mothod = "post";
+			theForm.action = "${HOME}/admin/update/reject";
+			theForm.submit();
+		}
+	</script>
 </head>
 <body>
 
@@ -17,7 +34,7 @@
 		<%@ include file="../common/header.jsp" %>
 	
     	<h2>가입 요청 목록</h2>
-		<form action="${HOME}/admin/update/approval" method="get">
+		<form name="approvalFrm">
 			<table>
 				<tr>
 					<th>아이디</th>
@@ -38,7 +55,10 @@
 					</tr>
 				</c:forEach>
 			</table>	
-			<input type="submit" value="승인">
+			<div class="buttons">
+				<button type="button" onclick="doApproval();">가입 승인</button>
+				<button type="button" onclick="doReject();">가입 취소</button>
+			</div>
 		</form>
 		
 		

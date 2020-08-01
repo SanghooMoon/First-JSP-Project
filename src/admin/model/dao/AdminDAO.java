@@ -80,6 +80,30 @@ public class AdminDAO {
 		}
 	}
 	
+	// 가입을 거절, 즉 db에서 삭제
+	public void rejectMember(String chk) {
+		// TODO Auto-generated method stub
+		
+		String sql = "DELETE FROM member WHERE id=?";
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, chk);
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt);
+		}
+		
+	}
+	
 	
 	
 	

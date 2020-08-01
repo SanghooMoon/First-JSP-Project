@@ -12,4 +12,7 @@ public interface AdminService {
 	// 가입 요청 승인
 	void approvalMember(String chk);
 	
+	// 가입 요청 거절
+	void rejectMember(String chk);
+	
 }

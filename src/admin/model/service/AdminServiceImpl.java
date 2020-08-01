@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import admin.model.dao.AdminDAO;
 import member.model.dto.Member;
 
-public class AdminServiceImpl implements AdminService{
+public class AdminServiceImpl implements AdminService {
 	
 	private AdminDAO aDAO = AdminDAO.getInstance();
 	
@@ -20,6 +20,12 @@ public class AdminServiceImpl implements AdminService{
 	public void approvalMember(String chk) {
 		// TODO Auto-generated method stub
 		aDAO.approvalMember(chk);
+	}
+
+	@Override
+	public void rejectMember(String chk) {
+		// TODO Auto-generated method stub
+		aDAO.rejectMember(chk);
 	}
 	
 	

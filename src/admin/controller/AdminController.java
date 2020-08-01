@@ -70,7 +70,19 @@ public class AdminController extends HttpServlet {
 				aService.approvalMember(chk);
 			}
 			
+		} else if(path.equals("/update/reject")) {		// 가입 거절
+			nextPage = "/admin/approval";
 			
+			String[] checked = request.getParameterValues("checked");
+			if(checked==null) {
+				request.getRequestDispatcher(nextPage).forward(request, response);
+				return;
+			}
+			
+			for(String chk : checked) {
+				System.out.println("삭제 시 체크된 id : " + chk);
+				aService.rejectMember(chk);
+			}
 		}
 		
 		

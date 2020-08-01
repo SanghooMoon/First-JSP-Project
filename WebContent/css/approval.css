@@ -7,4 +7,6 @@ table { border: 1px solid black; margin-bottom: 15px; border-collapse: collapse;
 td, th { padding: 15px; text-align: center; border: 1px solid black; }
 tr:first-child { background-color: #e8e8e8;}
 td input { width: 30px; height: 30px;}
-input { display: block; width: 70px; height: 30px; margin: 0 auto;}
+.buttons { text-align: center; }
+button { width: 70px; height: 30px; background: #e8e8e8;border: 1px solid; border-radius: 10px;}
+button:first-child { margin-right: 10px; }
