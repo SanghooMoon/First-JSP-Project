@@ -6,15 +6,17 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-   <%@ include file="../common/head.jspf" %>
-    
+	
+   	<%@ include file="../common/head.jspf" %>
+    <link rel="stylesheet" href="${HOME}/css/approval.css">
+	<title>가입 요청 목록</title>
 </head>
 <body>
 
 	<div id="wrap">
 		<%@ include file="../common/header.jsp" %>
 	
-		<h2>승인페이지</h2>
+    	<h2>가입 요청 목록</h2>
 		<form action="${HOME}/admin/update/approval" method="get">
 			<table>
 				<tr>
@@ -23,6 +25,7 @@
 					<th>핸드폰번호</th>
 					<th>가입일</th>
 					<th>등급</th>
+					<th>가입승인</th>
 				</tr>
 				<c:forEach items="${list}" var="member">
 					<tr>
@@ -34,10 +37,10 @@
 						<td><input type="checkbox" value="${member.id }" name="checked"></td>
 					</tr>
 				</c:forEach>
-			</table>
-			<input type="submit" value="버튼">
-			
+			</table>	
+			<input type="submit" value="승인">
 		</form>
+		
 		
 	
 		<%@ include file="../common/footer.jsp" %>
