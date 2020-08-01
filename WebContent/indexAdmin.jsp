@@ -19,7 +19,7 @@
 		<br>
 		<a>회원 관리</a>
 		<br>
-		<a>가입 요청 목록</a>
+		<a href="${HOME}/admin/approval">가입 요청 목록</a>
 		
 		
 		<%@ include file="./common/footer.jsp" %>

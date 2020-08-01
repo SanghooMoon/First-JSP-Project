@@ -18,7 +18,7 @@ public class MemberDAO {
 	// 데이터베이스에 회원을 추가하는 메서드
 	public void insertMember(Member member) {
 		
-		String sql = "INSERT INTO member VALUES(?, ?, ?, ?, SYSDATE, 'Y', 'NORMAL')";
+		String sql = "INSERT INTO member VALUES(?, ?, ?, ?, SYSDATE, 'N', 'NORMAL')";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;

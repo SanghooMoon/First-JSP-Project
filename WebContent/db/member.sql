@@ -23,6 +23,9 @@ COMMIT;
 INSERT INTO member VALUES('sanghoo', 'sanghoo', '°ü¸®ÀÚ', '01039257715', SYSDATE, 'Y', 'ADMIN'); 
 COMMIT;
 
+SELECT * FROM member WHERE use='N';
+
+
 
 
 
