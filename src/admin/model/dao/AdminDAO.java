@@ -58,6 +58,28 @@ public class AdminDAO {
 		return list;
 	}
 	
+	// 회원 가입 승인
+	public void approvalMember(String chk) {
+		// TODO Auto-generated method stub
+		
+		String sql = "UPDATE member set use='Y' WHERE id=?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, chk);
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt);
+		}
+	}
+	
 	
 	
 	

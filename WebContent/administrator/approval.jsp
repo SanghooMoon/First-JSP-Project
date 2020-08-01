@@ -15,26 +15,30 @@
 		<%@ include file="../common/header.jsp" %>
 	
 		<h2>승인페이지</h2>
-		<table>
-			<tr>
-				<th>아이디</th>
-				<th>이름</th>
-				<th>핸드폰번호</th>
-				<th>가입일</th>
-				<th>등급</th>
-			</tr>
-			<c:forEach items="${list}" var="member">
+		<form action="${HOME}/admin/update/approval" method="get">
+			<table>
 				<tr>
-					<td>${member.id }</td>
-					<td>${member.name }</td>
-					<td>${member.phone }</td>
-					<td>${member.indate }</td>
-					<td>${member.grade }</td>
+					<th>아이디</th>
+					<th>이름</th>
+					<th>핸드폰번호</th>
+					<th>가입일</th>
+					<th>등급</th>
 				</tr>
-			</c:forEach>
+				<c:forEach items="${list}" var="member">
+					<tr>
+						<td>${member.id }</td>
+						<td>${member.name }</td>
+						<td>${member.phone }</td>
+						<td>${member.indate }</td>
+						<td>${member.grade }</td>
+						<td><input type="checkbox" value="${member.id }" name="checked"></td>
+					</tr>
+				</c:forEach>
+			</table>
+			<input type="submit" value="버튼">
 			
-			
-		</table>
+		</form>
+		
 	
 		<%@ include file="../common/footer.jsp" %>
 	</div>

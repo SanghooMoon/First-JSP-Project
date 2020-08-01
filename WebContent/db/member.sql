@@ -25,8 +25,8 @@ COMMIT;
 
 SELECT * FROM member WHERE use='N';
 
-
-
+UPDATE member set use='Y' WHERE id='scott2';
+commit;
 
 
 

@@ -15,6 +15,12 @@ public class AdminServiceImpl implements AdminService{
 		return aDAO.selectApprovalList();
 		
 	}
+
+	@Override
+	public void approvalMember(String chk) {
+		// TODO Auto-generated method stub
+		aDAO.approvalMember(chk);
+	}
 	
 	
 	

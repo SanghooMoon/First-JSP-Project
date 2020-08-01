@@ -55,6 +55,22 @@ public class AdminController extends HttpServlet {
 			ArrayList<Member> list = aService.approvalList();
 			request.setAttribute("list", list);
 			
+		} else if(path.equals("/update/approval")) {	// 가입 승인
+			nextPage = "/admin/approval";
+			
+			// 선택되어온 회원들의 아이디
+			String[] checked = request.getParameterValues("checked");
+			if(checked==null) {
+				request.getRequestDispatcher(nextPage).forward(request, response);
+				return;
+			}
+			
+			for(String chk : checked) {
+				System.out.println("체크된 id : " + chk);
+				aService.approvalMember(chk);
+			}
+			
+			
 		}
 		
 		
