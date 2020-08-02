@@ -15,4 +15,7 @@ public interface AdminService {
 	// 가입 요청 거절
 	void rejectMember(String chk);
 	
+	// 가입 승인된 회원 리스트 조회
+	ArrayList<Member> MemberList();
+	
 }

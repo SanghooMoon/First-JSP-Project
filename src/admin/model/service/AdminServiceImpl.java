@@ -12,20 +12,26 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public ArrayList<Member> approvalList() {
 		// TODO Auto-generated method stub
-		return aDAO.selectApprovalList();
+		return aDAO.selectApprovalList();	// 가입요청한 회원들
 		
 	}
 
 	@Override
 	public void approvalMember(String chk) {
 		// TODO Auto-generated method stub
-		aDAO.approvalMember(chk);
+		aDAO.approvalMember(chk);			// 가입 승인
 	}
 
 	@Override
 	public void rejectMember(String chk) {
 		// TODO Auto-generated method stub
-		aDAO.rejectMember(chk);
+		aDAO.rejectMember(chk);				// 가입 거절
+	}
+
+	@Override
+	public ArrayList<Member> MemberList() {
+		// TODO Auto-generated method stub
+		return aDAO.selectMemberList();		// 가입승인된 회원 목록
 	}
 	
 	

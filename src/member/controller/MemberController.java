@@ -109,7 +109,7 @@ public class MemberController extends HttpServlet {
 			
 			mService.singUp(member); // 회원가입 서비스 실행
 			
-		}
+		} 
 		
 		request.getRequestDispatcher(nextPage).forward(request, response);
 	}

@@ -14,7 +14,7 @@
 		function doApproval(){
 			
 			var theForm = document.approvalFrm;
-			theForm.mothod = "post";
+			theForm.method = "post";
 			theForm.action = "${HOME}/admin/update/approval";
 			theForm.submit();
 			
@@ -22,7 +22,7 @@
 		
 		function doReject(){
 			var theForm = document.approvalFrm;
-			theForm.mothod = "post";
+			theForm.method = "post";
 			theForm.action = "${HOME}/admin/update/reject";
 			theForm.submit();
 		}

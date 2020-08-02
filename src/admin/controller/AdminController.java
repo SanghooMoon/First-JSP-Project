@@ -83,6 +83,13 @@ public class AdminController extends HttpServlet {
 				System.out.println("삭제 시 체크된 id : " + chk);
 				aService.rejectMember(chk);
 			}
+		} else if(path.equals("/management")) {			// 가입 승인된 회원 리스트
+			nextPage = "/administrator/memberList.jsp";
+			
+			// 가입된 목록 확인
+			ArrayList<Member> list = aService.MemberList();
+			request.setAttribute("list", list);
+			
 		}
 		
 		

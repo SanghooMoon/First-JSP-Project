@@ -17,7 +17,7 @@ SELECT * FROM member;
 INSERT INTO member VALUES('scott', 'tiger', '½ºÄ±', '01011112222', SYSDATE, 'Y', 'NORMAL'); 
 COMMIT;
 
-INSERT INTO member VALUES('scott2', 'tiger2', '½ºÄ±2', '01022223333', SYSDATE, 'N', 'NORMAL'); 
+INSERT INTO member VALUES('scott4', 'tiger4', '½ºÄ±2', '01022223333', SYSDATE, 'N', 'NORMAL'); 
 COMMIT;
 
 INSERT INTO member VALUES('sanghoo', 'sanghoo', '°ü¸®ÀÚ', '01039257715', SYSDATE, 'Y', 'ADMIN'); 
@@ -25,7 +25,10 @@ COMMIT;
 
 SELECT * FROM member WHERE use='N';
 
-UPDATE member set use='Y' WHERE id='scott2';
+UPDATE member set use='N' WHERE id='scott';
+commit;
+
+DELETE FROM member WHERE id='scott2';
 commit;
 
 

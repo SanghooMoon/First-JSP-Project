@@ -9,4 +9,4 @@ tr:first-child { background-color: #e8e8e8;}
 td input { width: 30px; height: 30px;}
 .buttons { text-align: center; }
 button { width: 70px; height: 30px; background: #e8e8e8;border: 1px solid; border-radius: 10px;}
-button:first-child { margin-right: 10px; }
+button:first-child { margin-right: 10px; } 
