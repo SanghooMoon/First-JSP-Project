@@ -9,6 +9,20 @@
 	<%@ include file="../common/head.jspf"%>
 	<link rel="stylesheet" href="${HOME}/css/approval.css">		<!-- 수정예정 -->
 	<title>회원 목록</title>
+	
+	<script>
+		
+	
+		function modify(){
+			var theForm = document.listFrm;
+			theForm.method = "post";
+			theForm.action = "${HOME}/admin/update/modify";
+			theForm.submit();
+			
+			alert("수정이 완료되었습니다.");
+		}
+	
+	</script>
 </head>
 <body>
 
@@ -32,18 +46,19 @@
 						<td>${member.phone }</td>
 						<td>${member.indate }</td>
 						<td>
-							<select>
+							<select name="grade">
 								<option>${member.grade }</option>
 								<option>ADMIN</option>
 								<option>NORMAL</option>
 							</select>
 						</td>
 					</tr>
+					<input type="hidden" name="id" value=${member.id }>
 				</c:forEach>
 			</table>
 			<div class="buttons">
-				<button type="button" onclick="();">수정</button>
-				<button type="button" onclick="();">삭제</button>
+				<button type="button" onclick="modify();">수정</button>
+				<button type="button" onclick="delete();">삭제</button>
 			</div>
 		</form>
 

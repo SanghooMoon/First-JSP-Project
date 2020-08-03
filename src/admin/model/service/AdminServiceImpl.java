@@ -33,6 +33,12 @@ public class AdminServiceImpl implements AdminService {
 		// TODO Auto-generated method stub
 		return aDAO.selectMemberList();		// 가입승인된 회원 목록
 	}
+
+	@Override
+	public void modifyGrade(String grade, String id) {
+		// TODO Auto-generated method stub
+		aDAO.updateGrade(grade, id);
+	}
 	
 	
 	

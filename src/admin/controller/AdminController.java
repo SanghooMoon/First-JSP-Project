@@ -90,6 +90,21 @@ public class AdminController extends HttpServlet {
 			ArrayList<Member> list = aService.MemberList();
 			request.setAttribute("list", list);
 			
+		} else if(path.equals("/update/modify")) {		// 회원 등급 수정
+			nextPage = "/administrator/memberList.jsp";
+
+			System.out.println("회원등급 수정");
+			
+			String[] grades = request.getParameterValues("grade");
+			String[] ids = request.getParameterValues("id");
+			
+			for(int i=0; i<grades.length; i++) {
+				aService.modifyGrade(grades[i], ids[i]);
+			}
+			// 목록 확인
+			ArrayList<Member> list = aService.MemberList();
+			request.setAttribute("list", list);
+			
 		}
 		
 		

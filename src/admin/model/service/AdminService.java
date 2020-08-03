@@ -18,4 +18,7 @@ public interface AdminService {
 	// 가입 승인된 회원 리스트 조회
 	ArrayList<Member> MemberList();
 	
+	// 회원 등급 수정
+	void modifyGrade(String grade, String id);
+	
 }

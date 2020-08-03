@@ -146,5 +146,30 @@ public class AdminDAO {
 
 		return list;
 	}
+	
+	// 회원 등급 업데이트
+	public void updateGrade(String grade, String id) {
+		// TODO Auto-generated method stub
+		
+		String sql = "update member set grade=? WHERE id=?";
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, grade);
+			pstmt.setString(2, id);
+			pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt);
+		}
+		
+	}
 
 }
